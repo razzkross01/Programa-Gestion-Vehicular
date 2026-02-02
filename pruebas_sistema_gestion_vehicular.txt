@@ -1,0 +1,98 @@
+
+ARCHIVO DE PRUEBA – SISTEMA DE GESTIÓN VEHICULAR
+
+==============================================
+DATOS INICIALES
+==============================================
+
+Vehículos precargados en el sistema:
+
+1) Patente: ABCD12
+   Marca: Toyota
+   Modelo: Corolla
+   Color: Blanco
+   Año: 2018
+   Tiene deuda: No
+   Permiso pagado: No
+
+2) Patente: WXYZ34
+   Marca: Hyundai
+   Modelo: Accent
+   Color: Gris
+   Año: 2015
+   Tiene deuda: Sí
+   Monto deuda: 120000
+   Permiso pagado: No
+
+==============================================
+PRUEBAS REALIZADAS
+==============================================
+
+PRUEBA 1 – Registro de vehículo
+Entrada:
+- Patente: QWER56
+- Marca: Nissan
+- Modelo: Versa
+- Color: Azul
+- Año: 2020
+
+Resultado esperado:
+=> Vehículo registrado correctamente
+
+----------------------------------------------
+
+PRUEBA 2 – Registro de patente duplicada
+Entrada:
+- Patente: ABCD12
+
+Resultado esperado:
+=>  Patente inválida o duplicada
+
+----------------------------------------------
+
+PRUEBA 3 – Pago de deuda
+Entrada:
+- Patente: WXYZ34
+- Opción: Pagar deuda
+
+Resultado esperado:
+=>  Deuda pagada correctamente
+=>  Monto deuda = 0
+
+----------------------------------------------
+
+PRUEBA 4 – Pago permiso con deuda pendiente
+Entrada:
+- Patente: WXYZ34 (antes de pagar deuda)
+
+Resultado esperado:
+=>  No se puede pagar permiso, existe deuda
+
+----------------------------------------------
+
+PRUEBA 5 – Pago permiso sin deuda
+Entrada:
+- Patente: ABCD12
+- Año vehículo: 2018
+
+Resultado esperado:
+=>  Permiso calculado
+=>  Permiso pagado correctamente
+
+----------------------------------------------
+
+PRUEBA 6 – Consulta de datos de vehículo
+Entrada:
+- Patente: ABCD12
+
+Resultado esperado:
+=>  Se muestran todos los datos del vehículo
+=>  Incluye estado de deuda y permiso
+
+==============================================
+CONCLUSIÓN
+==============================================
+
+El sistema responde correctamente a las distintas
+situaciones de uso, validando entradas, evitando
+duplicados y gestionando pagos según lo esperado.
