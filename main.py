@@ -98,7 +98,7 @@ def main():
         elif opcion == "2":
             os.system("cls")
             print("\n--- PAGO DE DEUDA ---")
-            patente = input("Ingrese patente: ")
+            patente = input("Ingrese patente: ").strip().upper()
 
             while True:
                 if  tiene_deuda(patente, vehiculos):
@@ -131,7 +131,13 @@ def main():
 
                 if tiene_deuda(patente, vehiculos):
                     print("El vehículo tiene deuda pendiente.")
-                    continue
+
+                    opcion_volver = input("¿Desea ingresar otra patente? (si/no): ").strip().lower()
+
+                    if opcion_volver == "si":
+                        continue
+                    else:
+                        break
 
                 if permiso_pagado(patente, vehiculos):
                     print("El vehículo ya pago el permiso.")

@@ -21,7 +21,7 @@ Diseñar e implementar un sistema de gestión de datos que:
 
 ## Estructura del proyecto
 
-```text
+```
 gestion_vehicular/
 │
 ├── main.py              # Flujo principal del programa y menú
